@@ -1,0 +1,9 @@
+React-Router-Dom
+React-Hot-Toast --> Setted up in the top hierarchy of our file in main.jsx
+React-Icons
+Material UI
+Vite-JS
+React-Redux Toolkit 
+axios --> Base Configurations setted up in main.tsx
+react-syntax-highlighter --> for showing the code block in the frontend 
+react-type-animation --> To make the homepage UI --> From npm/github/homepage then there you'll find some examples on how to implement

@@ -1,0 +1,17 @@
+.cont{
+    background: #05101c;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border-color: white;
+    cursor: pointer;
+    margin: 5px 0px;
+    padding: 5px;
+}
+.btn{
+    background: #05101c;
+    color:white;
+    font-size: large;
+    border: none;
+    cursor: pointer;
+}
