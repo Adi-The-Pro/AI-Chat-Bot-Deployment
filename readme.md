@@ -12,13 +12,15 @@ BrainyBot is an AI-powered chat application that leverages the OpenAI API to pro
 - User Authentication: Allows users to register and log in for personalized experiences.
 
 
-![Home Page]
+![Home Page](https://github.com/Adi-The-Pro/AI-Chat-Bot-Deployment/assets/98386784/ebcc1388-f216-4d49-8e31-9001d6fe2667)
 
-![Verification Page]
+![LoginPage](https://github.com/Adi-The-Pro/AI-Chat-Bot-Deployment/assets/98386784/a72d8d28-6be5-4bfc-8311-cd285c7d583d)
 
-![Add New Room]
 
-![Chatting Page]
+![SignupPage](https://github.com/Adi-The-Pro/AI-Chat-Bot-Deployment/assets/98386784/4792c675-d096-4a4b-8e97-b90a58ac0c3d)
+
+
+![Chatting Page](https://github.com/Adi-The-Pro/AI-Chat-Bot-Deployment/assets/98386784/52fece31-7297-49a8-a136-9af935e34087)
 ## How To Use
 - Sign Up / Log In: Create an account or log in to your existing account.
 - Ask Questions: Once logged in, you'll be directed to the chat interface. Type your questions into the chat input field and press Enter to send them.
@@ -26,6 +28,7 @@ BrainyBot is an AI-powered chat application that leverages the OpenAI API to pro
 ## Technologies Used
 - Frontend : Vite.js, Material UI, HTML, CSS, JavaScript
 - Backend  : Node.js, Express.js
+- Database : MongoDB
 - API: Open AI's API (NLP Model)
 ## Run Locally
 
