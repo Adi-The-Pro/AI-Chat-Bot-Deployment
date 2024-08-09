@@ -7,7 +7,7 @@ export default function Typer() {
   sequence={[
     'Chat With Your Own AI',
     1000,
-    'Built With Open AI 😎',
+    'Built With Gemini AI 😎',
     1000,
     'Your Own Customized Chatbot 👀',
     1000,
