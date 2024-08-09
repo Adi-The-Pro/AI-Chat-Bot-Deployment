@@ -1,4 +1,5 @@
-const User = require("../models/user");
+const User = require('../models/user')
+
 const bcrypt = require('bcrypt');
 const { createToken } = require("../utilis/token-manager");
 const { COOKIE_NAME } = require("../utilis/constants");

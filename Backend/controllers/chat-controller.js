@@ -1,4 +1,4 @@
-const User = require("../models/user");
+const User = require('../models/user');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { HarmBlockThreshold, HarmCategory } = require("@google/generative-ai");
 
