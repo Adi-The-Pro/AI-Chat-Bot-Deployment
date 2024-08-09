@@ -14,7 +14,7 @@ const theme = createTheme({
     allVariants: {color:"white"},
   },
 });
-axios.defaults.baseURL = 'http://localhost:5000/api/v1';
+axios.defaults.baseURL = 'https://backend-gyto.onrender.com/api/v1';
 axios.defaults.withCredentials = true;
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AuthProvider>
