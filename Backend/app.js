@@ -15,5 +15,8 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(morgan("dev"));
 
 app.use("/api/v1",router);
+app.get('/',(req,res) => {
+    return res.json({message:"Welcome from the backend"});
+})
 
 module.exports = app;
