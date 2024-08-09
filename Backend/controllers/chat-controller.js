@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { HarmBlockThreshold, HarmCategory } = require("@google/generative-ai");
 
 exports.generateChatCompletion = async (req,res,next) => {
     const {message} = req.body;
@@ -20,14 +21,30 @@ exports.generateChatCompletion = async (req,res,next) => {
             const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
             async function run() {
-                // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
-                const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
-                const result = await model.generateContent(message);
-                const response = await result.response;
-                const text = response.text();
-                user.chats.push({content:text,role:"assistant"});
-                await user.save();
-                return res.status(200).json({chats: user.chats});
+                try{
+                    // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
+                    //Safety Setting, for the type of content that should be blocked
+                    const safetySettings = [
+                        {
+                          category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+                          threshold: HarmBlockThreshold.BLOCK_NONE,
+                        },
+                        {
+                          category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+                          threshold: HarmBlockThreshold.BLOCK_NONE,
+                        },
+                    ];
+                    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash",safetySettings});
+                    const result = await model.generateContent(message);
+                    const response = await result.response;
+                    const text = response.text();
+                    user.chats.push({content:text,role:"assistant"});
+                    await user.save();
+                    return res.status(200).json({chats: user.chats});
+                }
+                catch(err){
+                    return res.status(500).json({message:"Content Banned"});
+                }
             }
             run();
         }
