@@ -14,7 +14,7 @@ const theme = createTheme({
     allVariants: {color:"white"},
   },
 });
-axios.defaults.baseURL = 'https://backend-gyto.onrender.com/api/v1';
+axios.defaults.baseURL = 'https://aichatbot-backend-8ms6.onrender.com/api/v1';
 axios.defaults.withCredentials = true;
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AuthProvider>
