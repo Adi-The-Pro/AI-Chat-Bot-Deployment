@@ -63,10 +63,12 @@ exports.userLogin = async (req,res,next) => {
         const token = await createToken(user._id.toString(),user.email);
         const expires = new Date();
         expires.setDate(expires.getDate()+7); //as our token will also expire after 7days and so should our cookie
-        res.cookie('auth-token',token,{
-          expires,
-          httpOnly: true,
+        res.cookie('auth-token', token, {
+          httpOnly: true, // Only accessible via HTTP, not JavaScript
+          secure: true, // Only send cookie over HTTPS
+          sameSite: 'None', // Required for cross-site cookies
         });
+        
         return res.status(200).json({message:"Ok", name:user.name, email:user.email});
     }catch(err){
         console.log(err);
