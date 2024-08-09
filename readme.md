@@ -1,12 +1,12 @@
 # BrainyBot
 
-BrainyBot is an AI-powered chat application that leverages the OpenAI API to provide users with solutions to their questions. It offers a seamless and interactive experience akin to the original ChatGPT.
+BrainyBot is an AI-powered chat application that leverages the Gemini API to provide users with solutions to their questions. It offers a seamless and interactive experience akin to the original Gemini Chatbot.
 
 
 
 ## Features
 
-- AI-Powered Chat: Utilizes the OpenAI API to generate human-like responses to user queries.
+- AI-Powered Chat: Utilizes the Gemini API to generate human-like responses to user queries.
 - Real-Time Interaction: Provides instant feedback and solutions to user questions, mimicking a natural conversation.
 - User-Friendly Interface: A clean and intuitive front end for easy interaction.
 - User Authentication: Allows users to register and log in for personalized experiences.
@@ -29,7 +29,7 @@ BrainyBot is an AI-powered chat application that leverages the OpenAI API to pro
 - Frontend : Vite.js, Material UI, HTML, CSS, JavaScript
 - Backend  : Node.js, Express.js
 - Database : MongoDB
-- API: Open AI's API (NLP Model)
+- API: Gemini Flash 1.5 AI's API (NLP Model)
 ## Run Locally
 
 Step-1: Clone the project
